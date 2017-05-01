@@ -5,6 +5,7 @@
 		What do we even want the game to do? -->
 <script src="http://code.responsivevoice.org/responsivevoice.js"></script>
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js" ></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
 <script type="text/javascript" src="jquery.console.js"></script>
 
 <script type="text/javascript" src="AdvPerson.js"></script>
@@ -28,7 +29,7 @@ $(document).ready(function(){
 			$(".shown").removeClass("shown").addClass("invisible");
 			$("#extra-container").show();
 			$(this).html("Show All");
-			
+
 		}
 	});
 });
@@ -55,17 +56,17 @@ $(document).bind('startGame', function(){
                     + Adventure.currentRoom.description + "\n" + Adventure.currentRoom.objectStr()
  					+ 'Type HELP for more info\n'
     });
-    
+
     $("a", ".extra").bind("click", function(e) {
         var data = $("#" + $(this).attr("data-load")).html();
         $("#extra-container").html(data);
     });
 });
 </script>
-	
-	
 
-	
+
+
+
 	<title>
 		Press Freedom for Bloggers
 	</title>
@@ -80,11 +81,11 @@ $(document).bind('startGame', function(){
 	<div id="extra-container" class="extra">
 	    <h1>What is Press Freedom For Bloggers?</h1>
         <div class="info-paragraph">
-			That's a really good question, and that's what this website is here for. Here we have the ETHICAL ADVENTURE game, where you can explore the history of and some important legal cases relating to press freedom for bloggers. 
+			That's a really good question, and that's what this website is here for. Here we have the ETHICAL ADVENTURE game, where you can explore the history of and some important legal cases relating to press freedom for bloggers.
         </div>
 	</div>
 	<a href="#" id="expand">Show All</a>
-	
+
 	<div id="overview" class="extra">
 	    <h1>Overview linked</h1>
 		<a data-load="overview" href="#nohash">scelerisque</a>

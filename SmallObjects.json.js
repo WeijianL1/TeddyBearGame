@@ -1,32 +1,7 @@
 [
    {
-      "name": "KEYS",
-      "description": "a set of keys",
-      "initialLoc": "1"
-   },
-   {
-      "name": "TIME MACHINE",
-      "description": "a time machine",
-      "initialLoc": "1"
-   },
-   {
-      "name": "LAMP",
-      "description": "a brightly shining brass lamp",
-      "initialLoc": "2"
-   },
-   {
-      "name": "QUILL",
-      "description": "something mightier than the sword",
-      "initialLoc": "2"
-   },
-   {
-      "name": "ROD",
-      "description": "a black rod with a rusty star",
-      "initialLoc": "3"
-   },
-   {
-      "name": "PAMPHLET",
-      "description": "a pamphlet on how to produce an enlightened citizenry called 'Of Education'",
+      "name": "Jacket",
+      "description": "a warm winter jacket",
       "initialLoc": "3"
    },
    {

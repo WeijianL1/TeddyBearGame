@@ -1,4 +1,9 @@
-[
+[  
+   {
+      "name": "Matt",
+      "quote": "Matt says: You shall sleep in this cold winter night",
+      "initialLoc": "3"
+   },
    {
       "name": "Justice Black",
       "quote": "Only a free and unrestrained press can effectively expose deception in government. And paramount among the responsibilities of a free press is the duty to prevent any part of the government from deceiving the people and sending them off to distant lands to die of foreign fevers and foreign shot and shell.",
@@ -13,16 +18,6 @@
       "name": "John Perry Barlow",
       "quote": "The first serious infowar is now engaged. The field of battle is WikiLeaks. You are the troops.",
       "initialLoc": "7"
-   },
-   {
-      "name": "John Locke",
-      "quote": "The end of law is not to abolish or restrain, but to preserve and enlarge freedom. For in all the states of created beings capable of law, where there is no law, there is no freedom.",
-      "initialLoc": "2"
-   },
-   {
-      "name": "John Milton",
-      "quote": "When as debtors and delinquents may walk abroad without a keeper, but unoffensive books must not stir forth without a visible jailer in their title.",
-      "initialLoc": "3"
    },
    {
       "name": "John Stuart Mill",

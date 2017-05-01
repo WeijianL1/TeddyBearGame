@@ -2,36 +2,42 @@
    {
       "id": "1",
       "name": "Bed",
-      "description": "Moonlight plays through the window, softly illuminating the bedroom, full of comfortable memories. To the he west is the cupboard where you usually live, and the doorway to the northwest leads to the rest of the house. David, your owner, lies next to you on the bed, in a deep sleep.",
+      "description": "Moonlight plays through the window, softly illuminating the bedroom, full of comfortable memories."+
+         "To the he west is the cupboard where you usually live, and the doorway to the northwest leads to the rest of the house."+
+         "David, your owner, lies next to you on the bed, in a deep sleep.",
       "motions": [
-         {"dir": "WEST", "dest": "2"},
-         {"dir": "GET", "dest": "2"}
+         {"dir": "WEST", "dest": "1", "keyStr": "TIME MACHINE,KEYS"},
+         {"dir": "Off_the_bed", "dest": "1", "keyStr": "TIME MACHINE,KEYS"}
       ],
-      "info": "bed"
+      "info": "in the bed"
    },
-
    {
       "id": "2",
       "name": "Bedroom",
-      "description": "Moonlight plays through the window, softly illuminating the bedroom, full of comfortable memories. To the west is the cupboard where you usually live, and the doorway to the northwest leads to the rest of the house. A big bed fills up most of the room.",
+      "description": "Moonlight plays through the window, softly illuminating the bedroom, full of comfortable memories."+
+      "To the west is the cupboard where you usually live, and the doorway to the northwest leads to the rest of the house."+
+      "A big bed fills up most of the room.",
       "motions": [
-         {"dir": "WEST", "dest": "3"},
-         {"dir": "Cupboard", "dest": "3"},
-         {"dir": "NORTHWEST",  "dest": "4"},
-         {"dir": "Doorway", "dest": "4"}
+         {"dir": "WEST", "dest": "1"},
+         {"dir": "Cupboard", "dest": "1"},
+         {"dir": "NORTHWEST",  "dest": "1"},
+         {"dir": "Doorway", "dest": "1"}
       ],
       "info": "in the bedroom"
    },
    {
       "id": "3",
       "name": "cupboard",
-      "description": "When you aren't lying on the bed, you usually stay in here, snug and safe with your friends atop the warm pile of clothes. The cupboard opens eastward to the bedroom. On the pile of clothes you can see your good friends Matt and Terry Moose.",
+      "description": "When you aren't lying on the bed, you usually stay in here, snug and safe with your friends atop the warm pile of clothes."+
+      "The cupboard opens eastward to the bedroom."+
+      "On the pile of clothes you can see your good friends Matt and Terry Moose.",
       "motions": [
-         {"dir": "EAST", "dest": "2"},
-         {"dir": "Bedroom", "dest": "2"}
+         {"dir": "EAST", "dest": "1"},
+         {"dir": "Bedroom", "dest": "1"}
       ],
       "info": "on the cupboard"
    },
+   //hadfhakhfdkhsafhkksahdfklhakhl
    {
       "id": "4",
       "name": "On the side of the Thames River",

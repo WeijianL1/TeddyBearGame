@@ -59,7 +59,11 @@ Adventure.handleCommand = function(line) {
    // split the command into components
    var cmd = tokens[0];
    var item = "";
-   if(tokens.length > 1){
+   if(line=="get off the bed"){
+      Adventure.handleMotionCommand(cmd);
+      alert("dsfa");
+   }
+    else if(tokens.length > 1){
         for(var i = 1; i < tokens.length; i++){
             item += tokens[i] + " ";
         }

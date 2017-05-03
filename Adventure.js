@@ -33,7 +33,6 @@ $.getJSON("TinyRooms.json.js", function(data) {
         
         $.getJSON("SmallPeople.json.js", function(data){
             Adventure.game.readPeople(data);
-            
             $(document).trigger('startGame');
         })
     });
@@ -80,24 +79,32 @@ Adventure.handleCommand = function(line) {
       if(Adventure.motionList.indexOf(cmd) != -1)
          Adventure.handleMotionCommand(cmd);
       Adventure.handleObjectCommand(cmd, item);
-      Adventure.handleTalkCommand(cmd, item);
+      Adventure.handleTalkCommand(cmd, tokens,item);
    }
 }
 
-Adventure.handleTalkCommand = function(cmd, rest){
+Adventure.handleTalkCommand = function(cmd,tokens, rest){
     if(cmd == "TALK"){
         var people = this.currentRoom.people;
-        if(rest.length == 0 && count(people) > 1){
+        if(tokens[1].toUpperCase()=='TO' && count(people) > 1){
             println("There is more than one person here! Who do you want to talk?");
             responsiveVoice.speak("There is more than one person here! Who do you want to talk?", "UK English Female", 
           {pitch: 1},{rate:0.5});
             return;
         }
         for(var p in people){
-            if(rest.length == 0 || p.search(new RegExp(rest, "i")) != -1)
+            if(tokens[1].toUpperCase()=='TO' || p.search(new RegExp(rest, "i")) != -1){
+              // if(Adventure.game.objects.includes('BALL')){
                 println(people[p].talk());
                 responsiveVoice.speak(people[p].talk(), "UK English Female", 
-          {pitch: 1},{rate:0.5});
+                {pitch: 1},{rate:0.5});
+          //     }
+          //       else{
+          //         println("hi");
+          //         responsiveVoice.speak(people[p].talk2(), "UK English Female", 
+          // {pitch: 1},{rate:0.5});
+          //       }
+              }
         }
     }else if(cmd == "WHO"){
         var people = this.currentRoom.people;
@@ -119,14 +126,14 @@ Adventure.handleSystemCommand = function(cmd) {
       println("Here are the list of commands in this ADVENTURE");
       println("<span class='help'>HELP</span>display this help menu");
       println("<span class='help'>LOOK</span>look around the room");
-      println("<span class='help'>INVENTORY</span>show inventory");
-      println("<span class='help'>WHO</span>show who is in the room");
+      //println("<span class='help'>INVENTORY</span>show inventory");
+      //println("<span class='help'>WHO</span>show who is in the room");
       println("<span class='help'>TALK</span>get a person to talk, if only one in room");
       println("<span class='help'>TALK &lt;lastname&gt;</span>talk, if more than one person in room");
       println("<span class='help'>TAKE &lt;object&gt;</span>take an object in a room");
-      println("<span class='help'>DIR</span>move with NORTH, SOUTH, EAST, WEST, UP, and DOWN");
-      help="Here are the list of commands in this ADVENTURE, say 'help' to display this help nemu, say 'look' to look around the room," 
-      +"say 'inventory' to hear what you have in your tool box, say 'who' to check who is in the room.";
+      //println("<span class='help'>DIR</span>move with NORTH, SOUTH, EAST, WEST, UP, and DOWN");
+      help="Here are the list of commands in this ADVENTURE, say 'help' to display this help menu, say 'look' to look around the room," 
+      +"say 'talk' and the person you wanna talk with to talk to him or her, say 'take' and the item's name to take an item. say the name of a place to move to that place.";
       responsiveVoice.speak(help, "UK English Female", 
           {pitch: 1},{rate:0.5});
    } else if(cmd == "INVENTORY") {
@@ -186,23 +193,23 @@ Adventure.handleMotionCommand = function(cmd) {
             Adventure.currentRoom = Adventure.game.rooms[val.destRoomId];
             // display info about new room
             Adventure.currentRoom.describe();
-            if(Adventure.currentRoom.hasPerson)
-               println("Someone is here.");
-               responsiveVoice.speak("Someone is here", "UK English Female", 
-          {pitch: 1},{rate:0.5});
+            if(Adventure.currentRoom.hasPerson){
+               // println("Someone is here.");
+               // responsiveVoice.speak("Someone is here", "UK English Female", 
+               // {pitch: 1},{rate:0.5});
+             }
             Adventure.setInfo(Adventure.currentRoom.getInfo());
          } else {
             println("You do not have the right tools in your inventory to go that direction.");
             responsiveVoice.speak("You do not have the right tools in your inventory to go that direction.", "UK English Female", 
           {pitch: 1},{rate:0.5});
          }
-
       }
    });
    
    if(!correctDir) {
-      println("You cannot go that direction here.");
-      responsiveVoice.speak("You cannot go that direction here.", "UK English Female", 
+      println("You cannot go there.");
+      responsiveVoice.speak("You cannot go there.", "UK English Female", 
           {pitch: 1},{rate:0.5});
    }
 }

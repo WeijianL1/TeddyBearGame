@@ -46,19 +46,19 @@ AdvRoom.prototype.describe = function(force){
           {pitch: 1},{rate:0.5});}
     else{
         println(this.name);
-        responsiveVoice.speak(this.name, "UK English Female", 
+        responsiveVoice.speak("You are in the "+this.name, "UK English Female", 
           {pitch: 1},{rate:0.5});}
     
     println(this.objectStr());
+    responsiveVoice.speak(this.objectStr(), "UK English Female", 
+          {pitch: 1},{rate:0.5});
     this.visited = true;
 }
 
 AdvRoom.prototype.look = function(){
     println(this.description);
     println(this.objectStr());
-    responsiveVoice.speak(this.description, "UK English Female", 
-      {pitch: 1},{rate:0.5});
-    responsiveVoice.speak(this.objectStr(), "UK English Female", 
+    responsiveVoice.speak(this.description+this.objectStr(), "UK English Female", 
       {pitch: 1},{rate:0.5});
 }
 

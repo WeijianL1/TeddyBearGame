@@ -36,6 +36,8 @@ $(document).ready(function(){
 $(document).bind('startGame', function(){
 	/* Second console */
 	var console = $(".console");
+	var welcome ='Welcome to the Teddy Bear story. You are now a fluffy little Teddy Bear. Tomorrow is the big Teddy bear party, and you must definitely not let your owner forget about it.'+"\n"+ Adventure.currentRoom.description + "\n" + Adventure.currentRoom.objectStr()
+ 					+ 'Say HELP for more info\n'
     var controller = console.console({
       autofocus: true,
       promptLabel: '> ',
@@ -50,12 +52,14 @@ $(document).bind('startGame', function(){
       animateScroll:true,
       promptHistory:true,
           // output description for default room
-      welcomeMessage:'Welcome to a world in which decisions have consequences. '+
-                    'Ethical gray areas exist around all corners in this world.  Choose your path wisely.\n\n'
+      welcomeMessage:'Welcome to the Teddy Bear story. You are now a fluffy little Teddy Bear. Tomorrow is the big Teddy bear party, and you must definitely not let your owner forget about it.'+"\n"
                     + Adventure.currentRoom.description + "\n" + Adventure.currentRoom.objectStr()
- 					+ 'Type HELP for more info\n'
+ 					+ 'Say HELP for more info\n'
     });
     
+    responsiveVoice.speak(welcome, "UK English Female", 
+      {pitch: 1},{rate:0.5})
+
     $("a", ".extra").bind("click", function(e) {
         var data = $("#" + $(this).attr("data-load")).html();
         $("#extra-container").html(data);
@@ -67,22 +71,17 @@ $(document).bind('startGame', function(){
 
 	
 	<title>
-		Press Freedom for Bloggers
+		A Teddy Bear's night's Out
 	</title>
 </head>
 
 <div id="wrapper">
-	<h1>Press Freedom for Bloggers</h1>
-	<h2>Eric Conner, Zach Galant, and Jeremy Keeshin</h2>
+	<h1>A Teddy Bear's night's Out</h1>
+	<h2>Serena Tan, Zhenwei Zhang, Weijian Li</h2>
 	<div class="console"></div>
 	<div>
 	</div>
-	<div id="extra-container" class="extra">
-	    <h1>What is Press Freedom For Bloggers?</h1>
-        <div class="info-paragraph">
-			That's a really good question, and that's what this website is here for. Here we have the ETHICAL ADVENTURE game, where you can explore the history of and some important legal cases relating to press freedom for bloggers. 
-        </div>
-	</div>
+
 	<a href="#" id="expand">Show All</a>
 	
 	<div id="overview" class="extra">

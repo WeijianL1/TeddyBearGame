@@ -53,7 +53,7 @@ AdventureGame.prototype.readObjects = function(objArr) {
       var curAdvObj = new AdvObject(val);
       
       self.objects.push(curAdvObj);
-      
+
       // add object to its initial room
       self.rooms[curAdvObj.initialRoomId].addObject(curAdvObj);
    });

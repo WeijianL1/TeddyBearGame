@@ -61,7 +61,8 @@ $(document).bind('startGame', function(){
  					+ 'Say HELP for more info\n'
     });
 
-    responsiveVoice.speak(welcome, "UK English Female",
+    
+    responsiveVoice.speak(welcome, "UK English Female", 
       {pitch: 1},{rate:0.5})
 
     $("a", ".extra").bind("click", function(e) {
@@ -82,11 +83,12 @@ $(document).bind('startGame', function(){
 <div id="wrapper">
 	<h1>A Teddy Bear's night's Out</h1>
 	<h2>Serena Tan, Zhenwei Zhang, Weijian Li</h2>
+
 	<p class="instr">  Use voice control according to the prompt  <i class="fa fa-microphone" aria-hidden="true"></i></p>
+
 	<div class="console"></div>
 	<div>
 	</div>
-
 
 	<div id="overview" class="extra">
 	    <h1>Overview linked</h1>

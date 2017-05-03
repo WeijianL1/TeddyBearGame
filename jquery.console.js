@@ -279,8 +279,8 @@
             console.log(promptText);
             commandTrigger();
           },
-          '(go to) livingroom': function() {
-            promptText = 'livingroom';
+          '(go to) study': function() {
+            promptText = 'study';
             console.log(promptText);
             commandTrigger();
           },

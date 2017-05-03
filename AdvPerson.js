@@ -13,7 +13,8 @@ function AdvPerson(obj) {
 }
 
 AdvPerson.prototype.talk = function(){
-    return this.quote + this.name;
+    return this.quote;
 }
+
 
 ///test

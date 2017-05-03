@@ -1,1 +1,3 @@
-a simple adventure game in js
+# Teddy Bear Game
+
+This is a voice adventure game using annyang voice recognition plugin and responsivevoice.js.

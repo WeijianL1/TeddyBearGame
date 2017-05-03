@@ -4,7 +4,10 @@
 		How should we store the files? Should it be exactly the same as the cs106a assignment?
 		What do we even want the game to do? -->
 <script src="http://code.responsivevoice.org/responsivevoice.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" media="screen" title="no title">
+<link href="https://fonts.googleapis.com/css?family=Baloo|Source+Sans+Pro" rel="stylesheet">
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js" ></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
 <script type="text/javascript" src="jquery.console.js"></script>
 
 <script type="text/javascript" src="AdvPerson.js"></script>
@@ -13,6 +16,7 @@
 <script type="text/javascript" src="AdvRoom.js"></script>
 <script type="text/javascript" src="AdventureGame.js"></script>
 <script type="text/javascript" src="Adventure.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
 
 
 <link rel="stylesheet" href="style.css" type="text/css" />
@@ -28,7 +32,7 @@ $(document).ready(function(){
 			$(".shown").removeClass("shown").addClass("invisible");
 			$("#extra-container").show();
 			$(this).html("Show All");
-			
+
 		}
 	});
 });
@@ -56,6 +60,7 @@ $(document).bind('startGame', function(){
                     + Adventure.currentRoom.description + "\n" + Adventure.currentRoom.objectStr()
  					+ 'Say HELP for more info\n'
     });
+
     
     responsiveVoice.speak(welcome, "UK English Female", 
       {pitch: 1},{rate:0.5})
@@ -66,10 +71,10 @@ $(document).bind('startGame', function(){
     });
 });
 </script>
-	
-	
 
-	
+
+
+
 	<title>
 		A Teddy Bear's night's Out
 	</title>
@@ -78,12 +83,13 @@ $(document).bind('startGame', function(){
 <div id="wrapper">
 	<h1>A Teddy Bear's night's Out</h1>
 	<h2>Serena Tan, Zhenwei Zhang, Weijian Li</h2>
+
+	<p class="instr">  Use voice control according to the prompt  <i class="fa fa-microphone" aria-hidden="true"></i></p>
+
 	<div class="console"></div>
 	<div>
 	</div>
 
-	<a href="#" id="expand">Show All</a>
-	
 	<div id="overview" class="extra">
 	    <h1>Overview linked</h1>
 		<a data-load="overview" href="#nohash">scelerisque</a>

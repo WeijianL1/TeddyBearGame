@@ -259,27 +259,27 @@
             console.log(promptText);
             commandTrigger();
           },
-          'bed': function() {
+          '(go to) bed': function() {
             promptText = 'bed';
             console.log(promptText);
             commandTrigger();
           },
-          'bedroom': function() {
+          '(go to) bedroom': function() {
             promptText = 'bedroom';
             console.log(promptText);
             commandTrigger();
           },
-          'cupboard': function() {
+          '(go to) cupboard': function() {
             promptText = 'cupboard';
             console.log(promptText);
             commandTrigger();
           },
-          'hallway': function() {
+          '(go to) hallway': function() {
             promptText = 'hallway';
             console.log(promptText);
             commandTrigger();
           },
-          'livingroom': function() {
+          '(go to) livingroom': function() {
             promptText = 'livingroom';
             console.log(promptText);
             commandTrigger();
@@ -294,27 +294,27 @@
             console.log(promptText);
             commandTrigger();
           },
-          'talk Matthew': function() {
+          'talk (to) Matthew': function() {
             promptText = 'talk Matthew';
             console.log(promptText);
             commandTrigger();
           },
-          'talk David': function() {
+          'talk (to) David': function() {
             promptText = 'talk David';
             console.log(promptText);
             commandTrigger();
           },
-          'talk Chester': function() {
+          'talk (to) Chester': function() {
             promptText = 'talk Chester';
             console.log(promptText);
             commandTrigger();
           },
-          'take jacket': function() {
+          'take (the) jacket': function() {
             promptText = 'take jacket';
             console.log(promptText);
             commandTrigger();
           },
-          'take ball': function() {
+          'take (the) ball': function() {
             promptText = 'take ball';
             console.log(promptText);
             commandTrigger();
